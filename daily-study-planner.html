@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Create a daily study plan with Eduvora. Learn how to organize subjects, study sessions, breaks, tasks and goals into a practical daily routine."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="Eduvora"
+    >
+
+    <meta
+        name="theme-color"
+        content="#5b5ff0"
+    >
+
+    <title>
+        Daily Study Planner for Students — Eduvora
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .seo-page {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .seo-hero {
+            padding: 42px;
+            margin-bottom: 22px;
+
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+        .seo-hero h1 {
+            margin-bottom: 12px;
+
+            font-size: clamp(
+                30px,
+                5vw,
+                48px
+            );
+
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+        }
+
+        .seo-hero p {
+            max-width: 760px;
+
+            color: var(--text-secondary);
+
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        .seo-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 22px;
+            padding: 12px 18px;
+
+            border-radius: 11px;
+
+            background: var(--primary);
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition:
+                transform var(--transition),
+                background var(--transition);
+        }
+
+        .seo-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .seo-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap: 18px;
+        }
+
+        .seo-card {
+            padding: 25px;
+
+            background: var(--surface);
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow-sm);
+
+            transition:
+                transform var(--transition),
+                box-shadow var(--transition);
+        }
+
+        .seo-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .seo-card h2 {
+            margin-bottom: 10px;
+            font-size: 19px;
+            letter-spacing: -0.3px;
+        }
+
+        .seo-card p {
+            color: var(--text-secondary);
+
+            line-height: 1.7;
+            font-size: 13px;
+        }
+
+        .seo-list {
+            margin-top: 14px;
+            padding-left: 20px;
+
+            color: var(--text-secondary);
+
+            line-height: 1.8;
+            font-size: 13px;
+        }
+
+        .seo-list li + li {
+            margin-top: 4px;
+        }
+
+        .seo-links {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .seo-links a {
+            padding: 9px 12px;
+
+            border-radius: 9px;
+
+            background: var(--primary-soft);
+            color: var(--primary);
+
+            text-decoration: none;
+
+            font-size: 12px;
+            font-weight: 650;
+
+            transition:
+                transform var(--transition),
+                background var(--transition);
+        }
+
+        .seo-links a:hover {
+            transform: translateY(-1px);
+            background: var(--primary-soft);
+        }
+
+        .seo-highlight {
+            margin-top: 22px;
+
+            padding: 22px;
+
+            border-left: 4px solid var(--primary);
+
+            background: var(--primary-soft);
+
+            border-radius: 0 var(--radius-md)
+                var(--radius-md) 0;
+        }
+
+        .seo-highlight p {
+            color: var(--text-secondary);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .seo-footer {
+            margin-top: 22px;
+            padding: 22px;
+
+            color: var(--text-secondary);
+
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .seo-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 650;
+        }
+
+        @media (max-width: 700px) {
+
+            .seo-hero {
+                padding: 28px;
+            }
+
+            .seo-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main class="content">
+
+        <div class="seo-page">
+
+
+            <!-- HERO -->
+
+            <section class="seo-hero">
+
+                <p class="eyebrow">
+                    EDVORA
+                </p>
+
+                <h1>
+                    Daily Study Planner for Students
+                </h1>
+
+                <p>
+                    A daily study planner helps turn a busy day
+                    into a clear and manageable routine. Plan the
+                    subjects you want to study, organize important
+                    tasks, schedule focused sessions and leave enough
+                    time for breaks and revision.
+                </p>
+
+                <a
+                    class="seo-button"
+                    href="index.html"
+                >
+                    Open Eduvora
+                </a>
+
+            </section>
+
+
+            <!-- MAIN CONTENT -->
+
+            <section class="seo-grid">
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        What is a daily study planner?
+                    </h2>
+
+                    <p>
+                        A daily study planner is a simple way to
+                        organize your academic work for one day.
+                        Instead of keeping every task in your head,
+                        you decide what needs attention, when you
+                        will work on it and how much time you can
+                        realistically give to it.
+                    </p>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Why plan your study day?
+                    </h2>
+
+                    <p>
+                        A clear plan can make a large workload feel
+                        more manageable. It can help you prioritize
+                        important work, see what is coming next and
+                        avoid leaving every task until the last minute.
+                    </p>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Start with your priorities
+                    </h2>
+
+                    <ul class="seo-list">
+
+                        <li>
+                            Identify your most important task.
+                        </li>
+
+                        <li>
+                            Choose the subjects that need attention.
+                        </li>
+
+                        <li>
+                            Check upcoming deadlines or tests.
+                        </li>
+
+                        <li>
+                            Leave time for unfinished work.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Divide your day into study sessions
+                    </h2>
+
+                    <p>
+                        Instead of planning one huge study block,
+                        divide your day into smaller sessions.
+                        Give each session a clear purpose, such as
+                        learning a concept, solving questions,
+                        revising notes or completing homework.
+                    </p>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Include breaks
+                    </h2>
+
+                    <p>
+                        A realistic daily study schedule should not
+                        consist of continuous studying. Short breaks
+                        can give you time to rest and return to the
+                        next session with a clearer mind.
+                    </p>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Make your plan realistic
+                    </h2>
+
+                    <p>
+                        A useful study planner should match the time
+                        you actually have. Planning more work than you
+                        can reasonably complete can make the schedule
+                        difficult to maintain. Start with important
+                        work and build from there.
+                    </p>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        A simple daily study structure
+                    </h2>
+
+                    <ul class="seo-list">
+
+                        <li>
+                            Review your priorities.
+                        </li>
+
+                        <li>
+                            Schedule your first study session.
+                        </li>
+
+                        <li>
+                            Complete focused subject work.
+                        </li>
+
+                        <li>
+                            Take planned breaks.
+                        </li>
+
+                        <li>
+                            Review what you completed.
+                        </li>
+
+                        <li>
+                            Prepare the next day's priorities.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article class="seo-card">
+
+                    <h2>
+                        Plan with Eduvora
+                    </h2>
+
+                    <p>
+                        Eduvora brings study planning tools into
+                        one organized space. Use tasks to capture
+                        your work, the planner to schedule study
+                        sessions, goals to track progress and focus
+                        tools to support distraction-free study.
+                    </p>
+
+                    <a
+                        class="seo-button"
+                        href="index.html"
+                    >
+                        Start planning
+                    </a>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- HIGHLIGHT -->
+
+            <section class="seo-highlight">
+
+                <p>
+                    <strong>
+                        A good daily study plan is flexible.
+                    </strong>
+
+                    Your schedule may change because of school,
+                    homework, tests or other responsibilities.
+                    The aim is not to create a perfect timetable;
+                    it is to create a practical plan that helps
+                    you know what to do next.
+                </p>
+
+            </section>
+
+
+            <!-- INTERNAL LINKS -->
+
+            <section
+                class="seo-card"
+                style="margin-top: 18px;"
+            >
+
+                <h2>
+                    Explore Eduvora
+                </h2>
+
+                <p>
+                    Explore more tools and resources designed
+                    to help students organize their study journey.
+                </p>
+
+                <div class="seo-links">
+
+                    <a href="index.html">
+                        Eduvora Home
+                    </a>
+
+                    <a href="study-planner.html">
+                        Study Planner
+                    </a>
+
+                    <a href="daily-study-planner.html">
+                        Daily Study Planner
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <div class="seo-footer">
+
+                <a href="index.html">
+                    Eduvora — Study Smarter
+                </a>
+
+                <span>
+                    ·
+                </span>
+
+                Daily study planning for students
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
